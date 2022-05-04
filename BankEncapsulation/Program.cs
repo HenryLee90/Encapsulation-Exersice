@@ -12,9 +12,13 @@ namespace BankEncapsulation
             account.Deposit(5.00);
            var newBalance= account.GetBalance();
             Console.WriteLine(newBalance);
-            account.Deposit(10.00);            
+            account.Deposit(10.00);
             Console.WriteLine(account.GetBalance());
-            
+            Console.WriteLine($"Enter amount you would like to deposit.");
+            var answer = double.Parse(Console.ReadLine());
+            account.Deposit(answer);
+            Console.WriteLine(account.GetBalance());
+           
                 
             
         }
